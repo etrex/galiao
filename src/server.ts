@@ -36,6 +36,7 @@ app.prepare().then(() => {
     const response = await lineNotify.getToken(code, redirectUri, clientId, clientSecret);
     const token = response.data.access_token;
     subscriptions.build({ token, session_id });
+    SendNotificationFrom(undefined, "有人想尬聊一波囉！");
     res.send('恭喜完成設定，請關閉此網頁！');
   });
 

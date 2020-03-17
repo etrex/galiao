@@ -5,7 +5,10 @@ export default async function SendNotificationFrom(session_id, message): Promise
   const groups = await subscriptions.find();
   groups.forEach(group => {
     if(group.session_id !== session_id){
-      lineNotify.sendNotify(group.token, message);
+      try{
+        lineNotify.sendNotify(group.token, message);
+      }catch(error){
+      }
     }
   });
 }

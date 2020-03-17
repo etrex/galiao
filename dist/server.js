@@ -42,6 +42,7 @@ app.prepare().then(() => {
             const response = yield lineNotify_1.default.getToken(code, redirectUri, clientId, clientSecret);
             const token = response.data.access_token;
             subscriptions_1.subscriptions.build({ token, session_id });
+            send_notification_from_1.default(undefined, "有人想尬聊一波囉！");
             res.send('恭喜完成設定，請關閉此網頁！');
         });
     });

@@ -19,7 +19,11 @@ function SendNotificationFrom(session_id, message) {
         const groups = yield subscriptions_1.subscriptions.find();
         groups.forEach(group => {
             if (group.session_id !== session_id) {
-                lineNotify_1.default.sendNotify(group.token, message);
+                try {
+                    lineNotify_1.default.sendNotify(group.token, message);
+                }
+                catch (error) {
+                }
             }
         });
     });
