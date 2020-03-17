@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tsc -w & nodemon dist/server.js",
     "lint": "eslint . --ext=js,ts",
-    "start": "tsc && node dist/server.js",
+    "start": "node dist/server.js",
     "test": "jest"
   },
   "dependencies": {
