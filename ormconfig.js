@@ -1,6 +1,6 @@
 const config = {
   type: 'postgres',
-  url: process.env.POSTGRESQL_URL,
+  url: process.env.DATABASE_URL,
   synchronize: false,
   logging: process.env.TYPEORM_LOGGING == 'true',
   entities: ['dist/entity/**/*.js'],
