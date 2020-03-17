@@ -41,7 +41,7 @@ function SubscriptionRequest(context) {
                         type: "button",
                         action: {
                             type: "uri",
-                            label: "開啟尬聊",
+                            label: "尬聊一波",
                             uri,
                         },
                         style: "primary",

@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 function HandleFollow(context) {
     return __awaiter(this, void 0, void 0, function* () {
-        context.sendText("Handle Follow");
+        context.sendText("想尬聊就邀我進群組");
     });
 }
 exports.default = HandleFollow;
