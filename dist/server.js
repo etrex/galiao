@@ -42,7 +42,12 @@ app.prepare().then(() => {
             const response = yield lineNotify_1.default.getToken(code, redirectUri, clientId, clientSecret);
             const token = response.data.access_token;
             subscriptions_1.subscriptions.build({ token, session_id });
-            send_notification_from_1.default(undefined, "有人想尬聊一波囉！");
+            send_notification_from_1.default(undefined, "新的尬聊朋友出現了，讓我們來歡迎他～");
+            try {
+                lineNotify_1.default.sendNotify(token, "已完成尬聊設定，接下來本群組所有發言都將公開於所有尬聊群組中。");
+            }
+            catch (error) {
+            }
             res.send('恭喜完成設定，請關閉此網頁！');
         });
     });

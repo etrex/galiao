@@ -18,7 +18,7 @@ const redirectUri = `${process.env.ROOT_PATH}/callback`;
 function SubscriptionRequest(context) {
     return __awaiter(this, void 0, void 0, function* () {
         const uri = lineNotify_1.default.getAuthLink(clientId, redirectUri, context.session.id);
-        yield context.sendFlex('請點選按鈕來尬聊一波：', {
+        yield context.sendFlex('請點選「尬聊一波」按鈕完成設定：', {
             type: "bubble",
             body: {
                 type: "box",
@@ -32,7 +32,7 @@ function SubscriptionRequest(context) {
                     },
                     {
                         type: "text",
-                        text: "請點選下方按鈕，在選擇 「請選擇您要接收通知的聊天室」 時請選擇本群組，並且在訂閱完成後將 LINE Notify 邀請加入本群組。",
+                        text: "請先確定 LINE Notify 已經邀請加入本群組，然後請點選「尬聊一波」按鈕完成設定，在選擇「請選擇您要接收通知的聊天室」時請選擇本群組。",
                         margin: "md",
                         wrap: true,
                         size: "xs"
